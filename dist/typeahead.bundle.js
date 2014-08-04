@@ -1617,6 +1617,9 @@
                 _.defer(_.bind(this.dropdown.empty, this.dropdown));
             },
             open: function open() {
+                if (this.dropdown.isEmpty) {
+                    this.dropdown.update("");
+                }
                 this.dropdown.open();
             },
             close: function close() {

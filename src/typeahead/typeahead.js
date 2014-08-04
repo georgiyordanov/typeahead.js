@@ -279,6 +279,9 @@ var Typeahead = (function() {
     // ### public
 
     open: function open() {
+      if (this.dropdown.isEmpty) {
+        this.dropdown.update('');
+      }
       this.dropdown.open();
     },
 
